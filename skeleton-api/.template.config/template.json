@@ -17,7 +17,13 @@
     "api-port": {
       "type": "parameter",
       "datatype":"int",
-      "replaces": "API_PORT",
+      "replaces": "API-PORT",
+      "isRequired": true
+    },
+    "postgres-port": {
+      "type": "parameter",
+      "datatype":"int",
+      "replaces": "POSTGRES-PORT",
       "isRequired": true
     }
   },
