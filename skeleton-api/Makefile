@@ -6,6 +6,10 @@ DATABASE_PROJECT := src/Skeleton.Infrastructure.Implementation.Database
 copy-env:
 	cp -n .env.example .env | true
 
+.PHONY: run
+run:
+	dotnet run --project $(STARTUP_PROJECT)
+
 .PHONY: run-infrastructure
 run-infrastructure: copy-env
 	docker-compose -f $(INFRASTRUCTURE_FILE) up
@@ -31,7 +35,3 @@ list-database-migrations:
 	dotnet ef migrations list \
         --project $(DATABASE_PROJECT) \
         --startup-project $(STARTUP_PROJECT)
-
-.PHONY: run-application
-run-application:
-	dotnet run --project $(STARTUP_PROJECT)
