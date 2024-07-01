@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Aleksei Mialkin",
+  "classifications": [
+    "Skeleton",
+    "Web"
+  ],
+  "identity": "Skeleton.Api",
+  "name": "Skeleton Web API",
+  "shortName": "skeleton-api",
+  "sourceName": "Skeleton",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "api-port": {
+      "type": "parameter",
+      "datatype":"int",
+      "replaces": "API_PORT",
+      "isRequired": true
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/.git/**",
+            "**/.idea/**",
+            "**/.DS_Store"
+          ]
+        }
+      ]
+    }
+  ]
+}

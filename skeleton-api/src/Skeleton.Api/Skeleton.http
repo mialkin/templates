@@ -1,0 +1,6 @@
+@src_HostAddress = http://localhost:API_PORT
+
+GET {{src_HostAddress}}/ping/
+Accept: application/json
+
+###
