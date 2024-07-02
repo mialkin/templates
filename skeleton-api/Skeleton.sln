@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Makefile = Makefile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Interfaces.Database", "src\Skeleton.Infrastructure.Interfaces.Database\Skeleton.Infrastructure.Interfaces.Database.csproj", "{08566CA8-8807-4D33-A121-AB98D10612A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Interfaces.Postgres", "src\Skeleton.Infrastructure.Interfaces.Postgres\Skeleton.Infrastructure.Interfaces.Postgres.csproj", "{08566CA8-8807-4D33-A121-AB98D10612A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Implementation.Database", "src\Skeleton.Infrastructure.Implementation.Database\Skeleton.Infrastructure.Implementation.Database.csproj", "{615972C9-7FC3-4987-8978-C2BFC30B8396}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Implementation.Postgres", "src\Skeleton.Infrastructure.Implementation.Postgres\Skeleton.Infrastructure.Implementation.Postgres.csproj", "{615972C9-7FC3-4987-8978-C2BFC30B8396}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Domain", "src\Skeleton.Domain\Skeleton.Domain.csproj", "{26C343EE-2CEC-41F3-ACFD-A0D98F800321}"
 EndProject
