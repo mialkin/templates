@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Infrastructure.Implementation.Database", "src\Skeleton.Infrastructure.Implementation.Database\Skeleton.Infrastructure.Implementation.Database.csproj", "{615972C9-7FC3-4987-8978-C2BFC30B8396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Domain", "src\Skeleton.Domain\Skeleton.Domain.csproj", "{26C343EE-2CEC-41F3-ACFD-A0D98F800321}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,7 @@ Global
 		{0AC5634A-9C2B-473C-A940-8E95B2B6C78A} = {3A5AE599-728D-468C-B4B0-D23735D366FA}
 		{08566CA8-8807-4D33-A121-AB98D10612A4} = {3A5AE599-728D-468C-B4B0-D23735D366FA}
 		{615972C9-7FC3-4987-8978-C2BFC30B8396} = {3A5AE599-728D-468C-B4B0-D23735D366FA}
+		{26C343EE-2CEC-41F3-ACFD-A0D98F800321} = {3A5AE599-728D-468C-B4B0-D23735D366FA}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0AC5634A-9C2B-473C-A940-8E95B2B6C78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,5 +52,9 @@ Global
 		{615972C9-7FC3-4987-8978-C2BFC30B8396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{615972C9-7FC3-4987-8978-C2BFC30B8396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{615972C9-7FC3-4987-8978-C2BFC30B8396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C343EE-2CEC-41F3-ACFD-A0D98F800321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C343EE-2CEC-41F3-ACFD-A0D98F800321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C343EE-2CEC-41F3-ACFD-A0D98F800321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C343EE-2CEC-41F3-ACFD-A0D98F800321}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
