@@ -11,8 +11,9 @@ Use template:
 
 ```bash
 dotnet new skeleton-api \
---name=PROJECT_NAME \
+--name=SOLUTION_NAME \
 --api-port=API_PORT \
+--postgres-port=POSTGRES_PORT \
 --force
 ```
 
