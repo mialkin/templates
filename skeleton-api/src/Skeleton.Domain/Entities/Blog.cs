@@ -2,14 +2,13 @@ namespace Skeleton.Domain.Entities;
 
 public class Blog
 {
-    public Blog(string name)
-    {
-        Name = name;
-    }
+    public Guid Id { get; }
 
-    public int Id { get; }
+    public Guid UserId { get; set; }
 
-    public string Name { get; private set; }
+    public required User User { get; set; }
+
+    public required string Name { get; set; }
 
     public ICollection<Post> Posts { get; } = new List<Post>();
 }

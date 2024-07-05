@@ -6,4 +6,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Skeleton.Infrastructure.Implementation.Database\Skeleton.Infrastructure.Implementation.Database.csproj" />
+    <ProjectReference Include="..\Skeleton.UseCases\Skeleton.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,6 @@
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Skeleton.Api.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Skeleton API", Version = "v1" });
 });
 
+services.ConfigureApplication(builder.Configuration);
+
 var application = builder.Build();
 
 application.UseRouting();
@@ -34,6 +37,6 @@ application.UseSwaggerUI(options =>
     options.DocumentTitle = "Skeleton API";
 });
 
-application.MapGet("/ping", () => "OK");
+application.MapControllers();
 
 application.Run();
