@@ -1,4 +1,4 @@
-using Skeleton.UseCases.Users.Commands.CreateUser;
+using Skeleton.UseCases.Users.Commands.Create;
 
 namespace Skeleton.Api.Configurations;
 

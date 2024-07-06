@@ -1,4 +1,4 @@
-using Skeleton.UseCases.Users.Queries.ListUsers;
+using Skeleton.UseCases.Users.Queries.List;
 
 namespace Skeleton.Api.Endpoints.Users.List;
 

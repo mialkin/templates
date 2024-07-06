@@ -2,7 +2,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Skeleton.Infrastructure.Interfaces.Database;
 
-namespace Skeleton.UseCases.Users.Queries.ListUsers;
+namespace Skeleton.UseCases.Users.Queries.List;
 
 internal class ListUsersQueryHandler(IReadOnlyDatabaseContext readOnlyDatabaseContext)
     : IRequestHandler<ListUsersQuery, IReadOnlyCollection<ListUsersDto>>

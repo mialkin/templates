@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
-using Skeleton.UseCases.Users.Queries.ListUsers;
+using Skeleton.UseCases.Users.Queries.List;
 
 namespace Skeleton.Api.Endpoints.Users.List;
 

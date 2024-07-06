@@ -4,7 +4,7 @@ using Skeleton.Domain;
 using Skeleton.Domain.Entities;
 using Skeleton.Infrastructure.Interfaces.Database;
 
-namespace Skeleton.UseCases.Users.Commands.CreateUser;
+namespace Skeleton.UseCases.Users.Commands.Create;
 
 internal class CreateUserCommandHandler(IDatabaseContext databaseContext)
     : IRequestHandler<CreateUserCommand, Result<CreateUserDto, Error>>

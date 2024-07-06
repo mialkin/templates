@@ -1,5 +1,5 @@
 using MediatR;
 
-namespace Skeleton.UseCases.Users.Queries.ListUsers;
+namespace Skeleton.UseCases.Users.Queries.List;
 
 public record ListUsersQuery : IRequest<IReadOnlyCollection<ListUsersDto>>;

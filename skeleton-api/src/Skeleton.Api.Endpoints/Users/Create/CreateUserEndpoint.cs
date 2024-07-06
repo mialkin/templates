@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
-using Skeleton.UseCases.Users.Commands.CreateUser;
+using Skeleton.UseCases.Users.Commands.Create;
 
 namespace Skeleton.Api.Endpoints.Users.Create;
 
