@@ -38,6 +38,6 @@ application.UseSwaggerUI(options =>
     options.DocumentTitle = "Skeleton API";
 });
 
-application.MapApplicationEndpoints();
+application.MapEndpoints();
 
 application.Run();
