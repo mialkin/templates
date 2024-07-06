@@ -7,21 +7,30 @@
 - [↑ Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [↑ GNU Make](https://www.gnu.org/software/make)
 
-## Running project
+## How to use project
+
+### 1. Setup infrastructure
 
 ```bash
-# Run Postgres in Docker
 make run-infrastructure
+```
 
-# Crete initial database migration
+```bash
 make migrate-database name="Add_Initial_Migration" environment="Ide"
+```
 
-# Apply migration
+```bash
 make update-database environment="Ide"
+```
 
-# Run application. To stop application press CTRL + C
+### 2. Run application
+
+```bash
 make run
+```
 
-# Delete Postgres container after application stop
+### 3. Tear down infrastructure
+
+```bash
 make shutdown-infrastructure
 ```
