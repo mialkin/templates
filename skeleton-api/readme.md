@@ -9,7 +9,7 @@
 
 ## How to use project
 
-### 1. Setup infrastructure
+### 1. Set up infrastructure
 
 ```bash
 make run-infrastructure
