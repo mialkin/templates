@@ -5,28 +5,28 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
 using Skeleton.Domain;
-using Skeleton.UseCases.Users.Queries.GetById;
+using Skeleton.UseCases.Users.Queries.Get;
 
-namespace Skeleton.Api.Endpoints.Users.GetById;
+namespace Skeleton.Api.Endpoints.Users.Get;
 
-public static class GetUserByIdEndpoint
+public static class GetUserEndpoint
 {
-    public static void MapGetUserById(this IEndpointRouteBuilder builder, string routePattern)
+    public static void MapGetUser(this IEndpointRouteBuilder builder, string routePattern)
     {
         builder.MapGet(routePattern, async (
                 Guid id,
                 ISender sender,
                 CancellationToken cancellationToken) =>
             {
-                var query = new GetUserByIdQuery(id);
+                var query = new GetUserQuery(id);
                 var maybe = await sender.Send(query, cancellationToken);
 
                 return maybe.HasValue
-                    ? Results.Ok(maybe.Value.Adapt<GetUserByIdResponse>())
+                    ? Results.Ok(maybe.Value.Adapt<GetUserResponse>())
                     : Results.BadRequest(Errors.General.NotFound(id));
             })
-            .Produces<GetUserByIdResponse>()
+            .Produces<GetUserResponse>()
             .Produces<Error>(StatusCodes.Status400BadRequest)
-            .WithOpenApi(operation => new OpenApiOperation(operation) { Summary = "Get user by ID" });
+            .WithOpenApi(operation => new OpenApiOperation(operation) { Summary = "Get user" });
     }
 }
