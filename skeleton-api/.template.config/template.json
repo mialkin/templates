@@ -32,6 +32,7 @@
       "modifiers": [
         {
           "exclude": [
+            "**/.env",
             "**/.git/**",
             "**/.idea/**",
             "**/.DS_Store"
