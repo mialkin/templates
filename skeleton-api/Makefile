@@ -18,20 +18,22 @@ run-infrastructure: copy-env
 shutdown-infrastructure:
 	docker compose --file $(INFRASTRUCTURE_FILE) down
 
-.PHONY: add-database-migration
-add-database-migration:
+.PHONY: migrate-database
+migrate-database:
 	dotnet ef migrations add $(name) \
         --project $(DATABASE_PROJECT) \
-        --startup-project $(STARTUP_PROJECT)
+        --startup-project $(STARTUP_PROJECT) \
+        -- --environment $(environment)
 
-.PHONY: apply-database-migrations
-apply-database-migrations:
+.PHONY: update-database
+update-database:
 	dotnet ef database update \
         --project $(DATABASE_PROJECT) \
-        --startup-project $(STARTUP_PROJECT)
+        --startup-project $(STARTUP_PROJECT) \
+        -- --environment $(environment)
 
-.PHONY: list-database-migrations
-list-database-migrations:
+.PHONY: list-migrations
+list-migrations:
 	dotnet ef migrations list \
         --project $(DATABASE_PROJECT) \
         --startup-project $(STARTUP_PROJECT)

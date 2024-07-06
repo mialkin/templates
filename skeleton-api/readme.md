@@ -10,5 +10,18 @@
 ## Running project
 
 ```bash
-dotnet run --project=src/Skeleton.Api
+# Run Postgres in Docker
+make run-infrastructure
+
+# Crete initial database migration
+make migrate-database name="Add_Initial_Migration" environment="Ide"
+
+# Apply migration
+make update-database environment="Ide"
+
+# Run application. To stop application press CTRL + C
+make run
+
+# Delete Postgres container after application stop
+make shutdown-infrastructure
 ```
