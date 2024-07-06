@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Skeleton.Api.Endpoints.Users.Create;
+using Skeleton.Api.Endpoints.Users.Delete;
 using Skeleton.Api.Endpoints.Users.Get;
 using Skeleton.Api.Endpoints.Users.List;
 
@@ -19,8 +20,9 @@ public static class EndpointsMapperExtension
         var groupBuilder = builder.MapGroup("api/users")
             .WithTags("Users");
 
-        groupBuilder.MapCreateUser("create");
+        groupBuilder.MapCreateUser("/");
         groupBuilder.MapListUsers("list");
-        groupBuilder.MapGetUser("get");
+        groupBuilder.MapGetUser("/");
+        groupBuilder.MapDeleteUser("/");
     }
 }

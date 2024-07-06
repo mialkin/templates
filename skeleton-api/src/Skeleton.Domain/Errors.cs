@@ -6,7 +6,7 @@ public static class Errors
     {
         public static Error NotFound(Guid id)
         {
-            return new Error(code: "record.not.found", message: $"Record with ID \"{id}\" not found");
+            return new Error(code: "record.not.found", message: $"Record with ID = {id} not found");
         }
 
         public static Error InternalServerError(string message)
