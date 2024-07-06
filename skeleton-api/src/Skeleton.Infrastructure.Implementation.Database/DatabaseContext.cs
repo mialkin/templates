@@ -5,7 +5,7 @@ using Skeleton.Infrastructure.Interfaces.Database;
 
 namespace Skeleton.Infrastructure.Implementation.Database;
 
-internal sealed class DatabaseContext : DbContext, IDatabaseContext
+internal sealed class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbContext(options), IDatabaseContext
 {
     public DbSet<User> Users { get; set; }
 
@@ -15,16 +15,12 @@ internal sealed class DatabaseContext : DbContext, IDatabaseContext
 
     public DbSet<Comment> Comments { get; set; }
 
-    public DatabaseContext(DbContextOptions<DatabaseContext> options)
-    {
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new BlogEntityTypeConfiguration());
 
-        modelBuilder.Entity<User>().HasData([
-            new User { Id = new Guid("272B950E-6835-4865-A924-C09750723145"), Username = "Michael" }
-        ]);
+        // modelBuilder.Entity<User>().HasData([
+        //     new User { Id = new Guid("272B950E-6835-4865-A924-C09750723145"), Username = "Michael" }
+        // ]);
     }
 }

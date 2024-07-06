@@ -12,11 +12,11 @@ run:
 
 .PHONY: run-infrastructure
 run-infrastructure: copy-env
-	docker-compose -f $(INFRASTRUCTURE_FILE) up
+	docker compose --file $(INFRASTRUCTURE_FILE) up
 
 .PHONY: shutdown-infrastructure
 shutdown-infrastructure:
-	docker-compose -f $(INFRASTRUCTURE_FILE) down
+	docker compose --file $(INFRASTRUCTURE_FILE) down
 
 .PHONY: add-database-migration
 add-database-migration:

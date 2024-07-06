@@ -1,3 +1,3 @@
 namespace Skeleton.Api.Endpoints.Users;
 
-public record CreateUserRequest();
+public record CreateUserRequest(string Username);

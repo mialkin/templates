@@ -1,3 +1,3 @@
 namespace Skeleton.Api.Endpoints.Users;
 
-public record CreateUserResponse();
+public record CreateUserResponse(Guid Id);
