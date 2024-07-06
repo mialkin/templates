@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Skeleton.Api.Endpoints.Users;
+using Skeleton.Api.Endpoints.Users.Create;
 
 namespace Skeleton.Api.Endpoints;
 

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.OpenApi.Models;
 using Skeleton.UseCases.Users.Commands.CreateUser;
 
-namespace Skeleton.Api.Endpoints.Users;
+namespace Skeleton.Api.Endpoints.Users.Create;
 
 public static class CreateUserEndpoint
 {

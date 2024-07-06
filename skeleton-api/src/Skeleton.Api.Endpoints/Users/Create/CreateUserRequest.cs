@@ -1,3 +1,3 @@
-namespace Skeleton.Api.Endpoints.Users;
+namespace Skeleton.Api.Endpoints.Users.Create;
 
 public record CreateUserRequest(string Username);
