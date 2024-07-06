@@ -7,6 +7,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Skeleton.Api.Endpoints\Skeleton.Api.Endpoints.csproj" />
     <ProjectReference Include="..\Skeleton.Infrastructure.Implementation.Database\Skeleton.Infrastructure.Implementation.Database.csproj" />
     <ProjectReference Include="..\Skeleton.UseCases\Skeleton.UseCases.csproj" />
   </ItemGroup>
