@@ -25,6 +25,6 @@ public static class CreateUserEndpoint
                     ? Results.Ok(result.Value.Adapt<CreateUserResponse>())
                     : Results.BadRequest(result.Error);
             })
-            .WithOpenApi(operation => new OpenApiOperation(operation) { Summary = "Create user" });
+            .WithOpenApi(x => new OpenApiOperation(x) { Summary = "Create user" });
     }
 }
