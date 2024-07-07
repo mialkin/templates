@@ -17,7 +17,21 @@ internal class CreateUserCommandHandler(IDatabaseContext databaseContext)
 
         databaseContext.Users.Add(user);
 
-        await databaseContext.SaveChangesAsync(cancellationToken);
+        try
+        {
+            await databaseContext.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception exception)
+        {
+            if (exception.InnerException != null &&
+                exception.InnerException.Message.Contains(
+                    "duplicate key value violates unique constraint \"ix_users_username\""))
+            {
+                return Errors.Word.UsernameAlreadyExists();
+            }
+
+            throw;
+        }
 
         return new CreateUserDto(user.Id);
     }

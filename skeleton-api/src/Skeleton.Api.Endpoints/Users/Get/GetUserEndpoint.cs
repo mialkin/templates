@@ -23,7 +23,7 @@ public static class GetUserEndpoint
 
                 return maybe.HasValue
                     ? Results.Ok(maybe.Value.Adapt<GetUserResponse>())
-                    : Results.BadRequest(Errors.General.NotFound(id));
+                    : Results.BadRequest(Errors.General.NotFound());
             })
             .Produces<GetUserResponse>()
             .Produces<Error>(StatusCodes.Status400BadRequest)
