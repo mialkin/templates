@@ -6,7 +6,9 @@ using Skeleton.Infrastructure.Interfaces.Database;
 
 namespace Skeleton.UseCases.Users.Commands.Create;
 
-internal class CreateUserCommandHandler(IDatabaseContext databaseContext)
+internal class CreateUserCommandHandler(
+    IDatabaseContext databaseContext,
+    IDatabaseErrorMessagesProvider databaseErrorMessagesProvider)
     : IRequestHandler<CreateUserCommand, Result<CreateUserDto, Error>>
 {
     public async Task<Result<CreateUserDto, Error>> Handle(
@@ -24,8 +26,7 @@ internal class CreateUserCommandHandler(IDatabaseContext databaseContext)
         catch (Exception exception)
         {
             if (exception.InnerException != null &&
-                exception.InnerException.Message.Contains(
-                    "duplicate key value violates unique constraint \"ix_users_username\""))
+                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UsernameUniquenessViolation))
             {
                 return Errors.Word.UsernameAlreadyExists();
             }

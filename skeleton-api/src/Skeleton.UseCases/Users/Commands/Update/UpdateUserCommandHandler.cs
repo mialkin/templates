@@ -5,7 +5,9 @@ using Skeleton.Infrastructure.Interfaces.Database;
 
 namespace Skeleton.UseCases.Users.Commands.Update;
 
-internal class UpdateUserCommandHandler(IDatabaseContext databaseContext)
+internal class UpdateUserCommandHandler(
+    IDatabaseContext databaseContext,
+    IDatabaseErrorMessagesProvider databaseErrorMessagesProvider)
     : IRequestHandler<UpdateUserCommand, UnitResult<Error>>
 {
     public async Task<UnitResult<Error>> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
@@ -18,7 +20,20 @@ internal class UpdateUserCommandHandler(IDatabaseContext databaseContext)
 
         user.Username = request.Username;
 
-        await databaseContext.SaveChangesAsync(cancellationToken);
+        try
+        {
+            await databaseContext.SaveChangesAsync(cancellationToken);
+        }
+        catch (Exception exception)
+        {
+            if (exception.InnerException != null &&
+                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UsernameUniquenessViolation))
+            {
+                return Errors.Word.UsernameAlreadyExists();
+            }
+
+            throw;
+        }
 
         return UnitResult.Success<Error>();
     }

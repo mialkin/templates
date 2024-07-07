@@ -11,6 +11,14 @@ public static class DatabaseConfiguration
         this IServiceCollection services,
         ConfigurationManager builderConfiguration)
     {
+        ConfigureDatabaseContext(services, builderConfiguration);
+        services.AddSingleton<IDatabaseErrorMessagesProvider, DatabaseErrorMessagesProvider>();
+
+        return services;
+    }
+
+    private static void ConfigureDatabaseContext(IServiceCollection services, ConfigurationManager builderConfiguration)
+    {
         var postgresSettings =
             builderConfiguration.GetRequiredSection(key: nameof(DatabaseSettings)).Get<DatabaseSettings>();
 
@@ -27,7 +35,5 @@ public static class DatabaseConfiguration
         });
 
         services.AddScoped<IReadOnlyDatabaseContext, ReadOnlyDatabaseContext>();
-
-        return services;
     }
 }
