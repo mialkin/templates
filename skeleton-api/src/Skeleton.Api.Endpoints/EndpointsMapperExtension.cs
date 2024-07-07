@@ -6,6 +6,7 @@ using Skeleton.Api.Endpoints.Users.Delete;
 using Skeleton.Api.Endpoints.Users.Get;
 using Skeleton.Api.Endpoints.Users.List;
 using Skeleton.Api.Endpoints.Users.Search;
+using Skeleton.Api.Endpoints.Users.Update;
 
 namespace Skeleton.Api.Endpoints;
 
@@ -22,9 +23,10 @@ public static class EndpointsMapperExtension
             .WithTags("Users");
 
         groupBuilder.MapCreateUser("/");
-        groupBuilder.MapListUsers("list");
         groupBuilder.MapGetUser("/");
+        groupBuilder.MapUpdateUser("/");
         groupBuilder.MapDeleteUser("/");
+        groupBuilder.MapListUsers("list");
         groupBuilder.MapSearchUsers("/search");
     }
 }

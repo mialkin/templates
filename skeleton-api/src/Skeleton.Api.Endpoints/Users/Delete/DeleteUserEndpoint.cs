@@ -22,6 +22,7 @@ public static class DeleteUserEndpoint
 
                 return Results.Ok();
             })
+            .Produces(StatusCodes.Status200OK)
             .WithOpenApi(x => new OpenApiOperation(x) { Summary = "Delete user" });
     }
 }
