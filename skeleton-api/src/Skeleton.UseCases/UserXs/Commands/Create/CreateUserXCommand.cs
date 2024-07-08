@@ -4,4 +4,4 @@ using Skeleton.Domain;
 
 namespace Skeleton.UseCases.UserXs.Commands.Create;
 
-public record CreateUserXCommand(string Username) : IRequest<Result<CreateUserXDto, Error>>;
+public record CreateUserXCommand(string Name) : IRequest<Result<CreateUserXDto, Error>>;

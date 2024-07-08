@@ -15,7 +15,7 @@ internal class CreateUserXCommandHandler(
         CreateUserXCommand request,
         CancellationToken cancellationToken)
     {
-        var userX = new UserX { Id = Guid.NewGuid(), Username = request.Username };
+        var userX = new UserX { Id = Guid.NewGuid(), Name = request.Name };
 
         databaseContext.UserXs.Add(userX);
 
@@ -26,9 +26,9 @@ internal class CreateUserXCommandHandler(
         catch (Exception exception)
         {
             if (exception.InnerException != null &&
-                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UsernameUniquenessViolation))
+                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UserXNameUniquenessViolation))
             {
-                return Errors.Word.UsernameAlreadyExists();
+                return Errors.Word.NameAlreadyExists();
             }
 
             throw;

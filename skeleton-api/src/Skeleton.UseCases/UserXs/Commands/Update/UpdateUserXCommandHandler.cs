@@ -18,7 +18,7 @@ internal class UpdateUserXCommandHandler(
             return UnitResult.Failure(Errors.General.NotFound());
         }
 
-        userX.Username = request.Username;
+        userX.Name = request.Name;
 
         try
         {
@@ -27,9 +27,9 @@ internal class UpdateUserXCommandHandler(
         catch (Exception exception)
         {
             if (exception.InnerException != null &&
-                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UsernameUniquenessViolation))
+                exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UserXNameUniquenessViolation))
             {
-                return Errors.Word.UsernameAlreadyExists();
+                return Errors.Word.NameAlreadyExists();
             }
 
             throw;

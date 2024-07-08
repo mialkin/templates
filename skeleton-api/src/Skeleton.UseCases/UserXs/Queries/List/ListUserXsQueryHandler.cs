@@ -12,7 +12,7 @@ internal class ListUserXsQueryHandler(IReadOnlyDatabaseContext readOnlyDatabaseC
         CancellationToken cancellationToken)
     {
         var userXs = await readOnlyDatabaseContext.UserXs
-            .Select(x => new ListUserXsDto(x.Id, x.Username))
+            .Select(x => new ListUserXsDto(x.Id, x.Name))
             .ToListAsync(cancellationToken);
 
         return userXs;

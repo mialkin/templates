@@ -1,3 +1,3 @@
 namespace Skeleton.Api.Endpoints.UserXs.Update;
 
-public record UpdateUserXRequest(Guid Id, string Username);
+public record UpdateUserXRequest(Guid Id, string Name);

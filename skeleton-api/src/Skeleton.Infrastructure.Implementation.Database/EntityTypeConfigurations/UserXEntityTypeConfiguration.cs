@@ -9,6 +9,6 @@ internal class UserXEntityTypeConfiguration : IEntityTypeConfiguration<UserX>
     public void Configure(EntityTypeBuilder<UserX> builder)
     {
         builder.HasKey(x => new { x.Id });
-        builder.HasIndex(x => new { x.Username }).IsUnique();
+        builder.HasIndex(x => new { x.Name }).IsUnique();
     }
 }

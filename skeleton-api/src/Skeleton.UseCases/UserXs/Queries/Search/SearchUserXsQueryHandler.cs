@@ -12,8 +12,8 @@ public class SearchUserXsQueryHandler(IReadOnlyDatabaseContext readOnlyDatabaseC
         CancellationToken cancellationToken)
     {
         var userXs = await readOnlyDatabaseContext.UserXs
-            .Where(x => x.Username.Contains(request.Term))
-            .Select(x => new SearchUserXsDto(x.Id, x.Username))
+            .Where(x => x.Name.Contains(request.Term))
+            .Select(x => new SearchUserXsDto(x.Id, x.Name))
             .ToListAsync(cancellationToken);
 
         return userXs;

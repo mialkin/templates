@@ -26,10 +26,10 @@ internal sealed class DatabaseContext(DbContextOptions<DatabaseContext> options)
     private static void SeedTestData(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<UserX>().HasData([
-            new UserX { Id = new Guid("272B950E-6835-4865-A924-C09750723145"), Username = "Michael" },
-            new UserX { Id = new Guid("AD4F3D9B-3D1A-43B7-B408-FDCF157125C2"), Username = "Luke" },
-            new UserX { Id = new Guid("4F8EAB4F-1EB6-49C3-9FCA-F8CFB8CDC149"), Username = "Stephen" },
-            new UserX { Id = new Guid("4C5979B4-73AF-49DC-B6EA-B9EED4BDC5CA"), Username = "Rich" }
+            new UserX { Id = new Guid("272B950E-6835-4865-A924-C09750723145"), Name = "Michael" },
+            new UserX { Id = new Guid("AD4F3D9B-3D1A-43B7-B408-FDCF157125C2"), Name = "Luke" },
+            new UserX { Id = new Guid("4F8EAB4F-1EB6-49C3-9FCA-F8CFB8CDC149"), Name = "Stephen" },
+            new UserX { Id = new Guid("4C5979B4-73AF-49DC-B6EA-B9EED4BDC5CA"), Name = "Rich" }
         ]);
     }
 }

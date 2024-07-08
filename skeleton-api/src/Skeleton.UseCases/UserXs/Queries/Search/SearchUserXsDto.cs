@@ -1,3 +1,3 @@
 namespace Skeleton.UseCases.UserXs.Queries.Search;
 
-public record SearchUserXsDto(Guid Id, string Username);
+public record SearchUserXsDto(Guid Id, string Name);
