@@ -28,6 +28,11 @@ make update-database environment="Ide"
 ```bash
 make run
 ```
+or:
+
+```bash
+make watch
+```
 
 ### 3. Tear down infrastructure
 
