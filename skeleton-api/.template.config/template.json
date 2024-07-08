@@ -29,14 +29,14 @@
     "main-entity-name": {
       "type": "parameter",
       "datatype": "text",
-      "replaces": "UserX",
-      "fileRename": "UserX",
+      "replaces": "UserTemplate",
+      "fileRename": "UserTemplate",
       "isRequired": true
     },
     "main-entity-name-lowercase": {
       "type": "derived",
       "valueSource": "main-entity-name",
-      "replaces": "userX",
+      "replaces": "userTemplate",
       "valueTransform": "firstLowerCaseInvariant"
     }
   },

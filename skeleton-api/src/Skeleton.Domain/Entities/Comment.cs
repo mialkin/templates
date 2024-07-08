@@ -6,9 +6,9 @@ public class Comment
 
     public required string Text { get; set; }
 
-    public Guid UserXId { get; set; }
+    public Guid UserTemplateId { get; set; }
 
-    public required UserX UserX { get; set; }
+    public required UserTemplate UserTemplate { get; set; }
 
     public Guid PostId { get; set; }
 

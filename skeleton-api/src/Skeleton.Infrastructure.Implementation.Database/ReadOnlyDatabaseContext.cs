@@ -6,7 +6,7 @@ namespace Skeleton.Infrastructure.Implementation.Database;
 
 internal sealed class ReadOnlyDatabaseContext(IDatabaseContext databaseContext) : IReadOnlyDatabaseContext
 {
-    public IQueryable<UserX> UserXs => databaseContext.UserXs.AsNoTracking();
+    public IQueryable<UserTemplate> UserTemplates => databaseContext.UserTemplates.AsNoTracking();
 
     public IQueryable<Blog> Blogs => databaseContext.Blogs.AsNoTracking();
 
