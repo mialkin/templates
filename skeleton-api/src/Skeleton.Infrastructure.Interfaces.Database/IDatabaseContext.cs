@@ -5,7 +5,7 @@ namespace Skeleton.Infrastructure.Interfaces.Database;
 
 public interface IDatabaseContext
 {
-    public DbSet<User> Users { get; }
+    public DbSet<UserX> UserXs { get; }
 
     public DbSet<Blog> Blogs { get; }
 

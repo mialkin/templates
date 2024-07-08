@@ -4,7 +4,7 @@ namespace Skeleton.Infrastructure.Interfaces.Database;
 
 public interface IReadOnlyDatabaseContext
 {
-    IQueryable<User> Users { get; }
+    IQueryable<UserX> UserXs { get; }
 
     IQueryable<Blog> Blogs { get; }
 

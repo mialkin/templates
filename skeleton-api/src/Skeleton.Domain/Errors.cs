@@ -18,6 +18,6 @@ public static class Errors
     public static class Word
     {
         public static Error UsernameAlreadyExists() =>
-            new(code: "user.username.already.exists", message: "Username already exists");
+            new(code: "userX.username.already.exists", message: "Username already exists");
     }
 }

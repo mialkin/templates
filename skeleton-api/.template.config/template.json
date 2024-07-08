@@ -25,6 +25,19 @@
       "datatype":"int",
       "replaces": "POSTGRES-PORT",
       "isRequired": true
+    },
+    "main-model-name": {
+      "type": "parameter",
+      "datatype":"text",
+      "replaces": "UserX",
+      "fileRename": "UserX",
+      "isRequired": true
+    },
+    "main-model-name-lowercase": {
+      "type": "derived",
+      "valueSource": "main-model-name",
+      "replaces": "userX",
+      "valueTransform": "firstLowerCaseInvariant"
     }
   },
   "sources": [

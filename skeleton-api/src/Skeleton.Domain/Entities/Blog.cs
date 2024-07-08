@@ -4,9 +4,9 @@ public class Blog
 {
     public Guid Id { get; }
 
-    public Guid UserId { get; set; }
+    public Guid UserXId { get; set; }
 
-    public required User User { get; set; }
+    public required UserX UserX { get; set; }
 
     public required string Name { get; set; }
 
