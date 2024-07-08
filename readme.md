@@ -19,16 +19,15 @@ dotnet new skeleton-api \
 --name=SOLUTION_NAME \
 --api-port=API_PORT \
 --postgres-port=POSTGRES_PORT \
+--main-entity-name=MAIN_ENTITY_NAME \
 --force
-
-git init && git add . && git commit -m "Initial commit"
 ```
 
 Example:
 
 ```csharp
 dotnet new skeleton-api \
---name=Blog \
+--name=Company.Blog \
 --api-port=8040 \
 --postgres-port=8050 \
 --main-entity-name=User \
