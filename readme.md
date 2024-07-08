@@ -34,7 +34,7 @@ dotnet new skeleton-api \
 --force
 ```
 
-At the end type `y` to confirm running `dotnet format` [↑ post action](https://github.com/dotnet/templating/wiki/Post-Action-Registry, which is necessary for sorting `using` directives.
+At the end type `y` to confirm running `dotnet format` [↑ post action](https://github.com/dotnet/templating/wiki/Post-Action-Registry), which is necessary for sorting `using` directives.
 
 ### 3\. Initialize Git repository and create first commit 
 
