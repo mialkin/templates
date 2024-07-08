@@ -14,7 +14,9 @@ dotnet new install ./ --force
 
 ### 2\. Create new solution based on installed template
 
-Run this commands from a new folder where you want your solution to be created:
+```bash
+mkdir SOLUTION_FOLDER && cd "$_"
+```
 
 ```bash
 dotnet new skeleton-api \
@@ -27,16 +29,32 @@ dotnet new skeleton-api \
 
 Example:
 
-```csharp
+```bash
+mkdir company-notes && cd "$_"
+```
+
+```bash
 dotnet new skeleton-api \
---name=Company.Blog \
+--name=Company.Notes \
 --api-port=8040 \
 --postgres-port=8050 \
 --main-entity-name=User \
 --force
 ```
 
-At the end type `y` to confirm running `dotnet format` [↑ post action](https://github.com/dotnet/templating/wiki/Post-Action-Registry), which is necessary for sorting `using` directives.
+At the end type `y` to confirm running `dotnet format` [↑ post action](https://github.com/dotnet/templating/wiki/Post-Action-Registry), which is necessary for sorting `using` directives:
+
+```console
+The template "Skeleton Web API" was created successfully.
+
+Processing post-creation actions...
+Template is configured to run the following action:
+Actual command: dotnet format
+Do you want to run this action [Y(yes)|N(no)]?
+y
+Running command 'dotnet format'...
+Command succeeded.
+```
 
 ### 3\. Initialize Git repository and create first commit 
 
