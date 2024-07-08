@@ -1,6 +1,8 @@
 # Templates
 
-## How to use project
+This solution contains [↑ custom template](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates) for `dotnet new` command. 
+
+## How to use template
 
 ### 1\. Install template on your computer
 
@@ -39,5 +41,5 @@ At the end type `y` to confirm running `dotnet format` [↑ post action](https:/
 ### 3\. Initialize Git repository and create first commit 
 
 ```bash
-git init && git add . && git commit -m "Initial commit"
+git init && git add . && git commit --message "Initial commit"
 ```
