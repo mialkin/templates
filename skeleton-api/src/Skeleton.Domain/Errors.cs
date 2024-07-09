@@ -15,7 +15,7 @@ public static class Errors
         }
     }
 
-    public static class Word
+    public static class UserTemplate
     {
         public static Error NameAlreadyExists() =>
             new(code: "userTemplate.name.already.exists", message: "Name already exists");

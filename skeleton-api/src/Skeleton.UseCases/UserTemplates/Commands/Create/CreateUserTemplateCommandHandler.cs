@@ -28,7 +28,7 @@ internal class CreateUserTemplateCommandHandler(
             if (exception.InnerException != null &&
                 exception.InnerException.Message.Contains(databaseErrorMessagesProvider.UserTemplateNameUniquenessViolation))
             {
-                return Errors.Word.NameAlreadyExists();
+                return Errors.UserTemplate.NameAlreadyExists();
             }
 
             throw;
