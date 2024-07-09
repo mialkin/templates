@@ -27,6 +27,6 @@ public static class EndpointsMapperExtension
         groupBuilder.MapUpdateUserTemplate("/");
         groupBuilder.MapDeleteUserTemplate("/");
         groupBuilder.MapListUserTemplates("list");
-        groupBuilder.MapSearchUserTemplates("/search");
+        groupBuilder.MapSearchUserTemplates("search");
     }
 }
