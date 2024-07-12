@@ -26,7 +26,7 @@ make update-database environment="Ide"
 ### 2. Run tests (optional)
 
 ```bash
-make test
+make test environment="Ide"
 ```
 
 ### 3. Run application

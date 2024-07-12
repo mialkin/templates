@@ -16,7 +16,7 @@ watch:
 
 .PHONY: test
 test:
-	dotnet test
+	dotnet test --environment ASPNETCORE_ENVIRONMENT=$(environment)
 
 .PHONY: run-infrastructure
 run-infrastructure: copy-env
