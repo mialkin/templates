@@ -14,6 +14,10 @@ run:
 watch:
 	dotnet watch --project $(STARTUP_PROJECT) --no-hot-reload
 
+.PHONY: test
+test:
+	dotnet test
+
 .PHONY: run-infrastructure
 run-infrastructure: copy-env
 	docker compose --file $(INFRASTRUCTURE_FILE) up

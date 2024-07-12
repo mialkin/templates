@@ -23,7 +23,13 @@ make migrate-database name="Add_Initial_Migration" environment="Ide"
 make update-database environment="Ide"
 ```
 
-### 2. Run application
+### 2. Run tests (optional)
+
+```bash
+make test
+```
+
+### 3. Run application
 
 ```bash
 make run
@@ -34,7 +40,7 @@ or:
 make watch
 ```
 
-### 3. Tear down infrastructure
+### 4. Tear down infrastructure
 
 ```bash
 make shutdown-infrastructure
