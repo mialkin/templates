@@ -1,6 +1,7 @@
 INFRASTRUCTURE_FILE := docker-compose.infrastructure.yml
 STARTUP_PROJECT := src/Skeleton.Api
 DATABASE_PROJECT := src/Skeleton.Infrastructure.Implementation.Database
+DEFAULT_ENVIRONMENT := Ide
 
 .PHONY: copy-env
 copy-env:
@@ -16,7 +17,7 @@ watch:
 
 .PHONY: test
 test:
-	dotnet test --environment ASPNETCORE_ENVIRONMENT=$(environment)
+	dotnet test --environment ASPNETCORE_ENVIRONMENT=$(DEFAULT_ENVIRONMENT)
 
 .PHONY: run-infrastructure
 run-infrastructure: copy-env
