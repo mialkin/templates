@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Aleksei Mialkin",
+  "classifications": [
+    "Skeleton",
+    "Console"
+  ],
+  "identity": "Skeleton.Console",
+  "name": "Skeleton console",
+  "shortName": "skeleton-console",
+  "sourceName": "Skeleton",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/.env",
+            "**/.git/**",
+            "**/.idea/**",
+            "**/.DS_Store"
+          ]
+        }
+      ]
+    }
+  ]
+}
