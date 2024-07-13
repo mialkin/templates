@@ -4,15 +4,27 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
 
 ## How to use template
 
-### 1\. Install template on your computer
+### 1\. Select folder with template you want to install
 
 ```bash
 cd skeleton-api
+```
+
+or:
+
+```bash
+cd skeleton-console
+```
+
+
+### 2\. Install template
+
+```bash
 dotnet new install ./ --force
 # dotnet new uninstall ./ # Uninstalls template
 ```
 
-### 2\. Create new solution based on installed template
+### 3\. Create new solution based on installed template
 
 ```bash
 mkdir SOLUTION_FOLDER && cd "$_"
@@ -24,6 +36,14 @@ dotnet new skeleton-api \
 --api-port=API_PORT \
 --postgres-port=POSTGRES_PORT \
 --main-entity-name=MAIN_ENTITY_NAME \
+--force
+```
+
+or:
+
+```bash
+dotnet new skeleton-console \
+--name=SOLUTION_NAME \
 --force
 ```
 
@@ -56,7 +76,7 @@ Running command 'dotnet format'...
 Command succeeded.
 ```
 
-### 3\. Initialize Git repository and create first commit 
+### 4\. Initialize Git repository and create first commit 
 
 ```bash
 git init && git add . && git commit --message "Initial commit"
