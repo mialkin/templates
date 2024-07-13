@@ -7,7 +7,7 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
 ### 1\. Select folder with template you want to install
 
 ```bash
-cd skeleton-api
+cd skeleton-cqrs
 ```
 
 or:
@@ -31,7 +31,7 @@ mkdir SOLUTION_FOLDER && cd "$_"
 ```
 
 ```bash
-dotnet new skeleton-api \
+dotnet new skeleton-cqrs \
 --name=SOLUTION_NAME \
 --api-port=API_PORT \
 --postgres-port=POSTGRES_PORT \
@@ -54,7 +54,7 @@ mkdir company-notes && cd "$_"
 ```
 
 ```bash
-dotnet new skeleton-api \
+dotnet new skeleton-cqrs \
 --name=Company.Notes \
 --api-port=8040 \
 --postgres-port=8050 \

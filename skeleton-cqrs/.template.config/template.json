@@ -5,9 +5,9 @@
     "Skeleton",
     "Web"
   ],
-  "identity": "Skeleton.Api",
-  "name": "Skeleton Web API",
-  "shortName": "skeleton-api",
+  "identity": "Skeleton.Cqrs",
+  "name": "Skeleton CQRS",
+  "shortName": "skeleton-cqrs",
   "sourceName": "Skeleton",
   "tags": {
     "language": "C#",
