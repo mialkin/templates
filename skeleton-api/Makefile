@@ -1,4 +1,5 @@
 STARTUP_PROJECT := src/Skeleton.Api
+DEFAULT_ENVIRONMENT := Ide
 
 .PHONY: run
 run:
@@ -7,3 +8,7 @@ run:
 .PHONY: watch
 watch:
 	dotnet watch --project $(STARTUP_PROJECT) --no-hot-reload
+
+.PHONY: test
+test:
+	dotnet test --environment ASPNETCORE_ENVIRONMENT=$(DEFAULT_ENVIRONMENT)

@@ -38,3 +38,10 @@ application.UseSwaggerUI(options =>
 application.MapEndpoints();
 
 application.Run();
+
+/// <summary>
+/// Public modifier is needed for instance creation of WebApplicationFactory{T} in integration tests.
+/// </summary>
+public partial class Program
+{
+}
