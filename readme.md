@@ -47,6 +47,16 @@ dotnet new skeleton-console \
 --force
 ```
 
+or:
+
+```bash
+dotnet new skeleton-api \
+--name=SOLUTION_NAME \
+--api-port=API_PORT \
+--main-entity-name=MAIN_ENTITY_NAME \
+--force
+```
+
 Example:
 
 ```bash
