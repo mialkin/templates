@@ -10,7 +10,7 @@ using Skeleton.Api.Endpoints.UserTemplates.Update;
 
 namespace Skeleton.Api.Endpoints;
 
-public static class Endpoints
+public static class EndpointsMapperExtension
 {
     public static void MapEndpoints(this IEndpointRouteBuilder builder)
     {
