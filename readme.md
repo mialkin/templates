@@ -16,12 +16,17 @@ or:
 cd skeleton-console
 ```
 
+or:
+
+```bash
+cd skeleton-api
+```
 
 ### 2\. Install template
 
 ```bash
-dotnet new install ./ --force
-# dotnet new uninstall ./ # Uninstalls template
+dotnet new install . --force
+# dotnet new uninstall . # Uninstalls template
 ```
 
 ### 3\. Create new solution based on installed template
