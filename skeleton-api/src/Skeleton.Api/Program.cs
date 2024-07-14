@@ -1,5 +1,6 @@
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Skeleton.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,5 +34,7 @@ application.UseSwaggerUI(options =>
     options.RoutePrefix = string.Empty;
     options.DocumentTitle = "Skeleton API";
 });
+
+application.MapEndpoints();
 
 application.Run();
