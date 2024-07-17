@@ -1,6 +1,20 @@
 # Templates
 
-This solution contains [↑ custom template](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates) for `dotnet new` command. 
+This solution contains [↑ custom template](https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates) for `dotnet new` command.
+
+## Table of contents
+
+- [Templates](#templates)
+  - [Table of contents](#table-of-contents)
+  - [How to use template](#how-to-use-template)
+    - [1. Select folder with template you want to install](#1-select-folder-with-template-you-want-to-install)
+    - [2. Install template](#2-install-template)
+    - [3. Create new solution based on installed template](#3-create-new-solution-based-on-installed-template)
+    - [4. Initialize Git repository and create first commit](#4-initialize-git-repository-and-create-first-commit)
+  - [Template descriptions](#template-descriptions)
+    - [`skeleton-cqrs`](#skeleton-cqrs)
+    - [`skeleton-api`](#skeleton-api)
+    - [`skeleton-console`](#skeleton-console)
 
 ## How to use template
 
@@ -96,3 +110,124 @@ Command succeeded.
 ```bash
 git init && git add . && git commit --message "Initial commit"
 ```
+
+## Template descriptions
+
+### `skeleton-cqrs`
+
+Solution dependencies:
+
+<img src="docs/project-dependencies.png" alt="Description of skeleton-cqrs solution">
+
+Files tree:
+
+```console
+├── Directory.Build.props
+├── Makefile
+├── Skeleton.sln
+├── docker-compose.infrastructure.yml
+├── readme.md
+├── src
+│   ├── Skeleton.Api
+│   │   ├── Configurations
+│   │   │   ├── ApplicationConfiguration.cs
+│   │   │   └── MediatrConfiguration.cs
+│   │   ├── Program.cs
+│   │   ├── Properties
+│   │   │   └── launchSettings.json
+│   │   ├── Skeleton.Api.csproj
+│   │   ├── appsettings.GitLab.json
+│   │   ├── appsettings.Ide.json
+│   │   ├── appsettings.Production.json
+│   │   └── appsettings.json
+│   ├── Skeleton.Api.Endpoints
+│   │   ├── EndpointsMapperExtension.cs
+│   │   ├── Skeleton.Api.Endpoints.csproj
+│   │   └── UserTemplates
+│   │       ├── Create
+│   │       │   ├── CreateUserTemplateEndpoint.cs
+│   │       │   ├── CreateUserTemplateRequest.cs
+│   │       │   └── CreateUserTemplateResponse.cs
+│   │       ├── Delete
+│   │       │   ├── DeleteUserTemplateEndpoint.cs
+│   │       │   └── DeleteUserTemplateRequest.cs
+│   │       ├── Get
+│   │       │   ├── GetUserTemplateEndpoint.cs
+│   │       │   └── GetUserTemplateResponse.cs
+│   │       ├── List
+│   │       │   ├── ListUserTemplatesEndpoint.cs
+│   │       │   └── ListUserTemplatesResponse.cs
+│   │       ├── Search
+│   │       │   ├── SearchUserTemplatesEndpoint.cs
+│   │       │   ├── SearchUserTemplatesRequest.cs
+│   │       │   └── SearchUserTemplatesResponse.cs
+│   │       └── Update
+│   │           ├── UpdateUserTemplateEndpoint.cs
+│   │           └── UpdateUserTemplateRequest.cs
+│   ├── Skeleton.Domain
+│   │   ├── Entities
+│   │   │   ├── Blog.cs
+│   │   │   ├── Comment.cs
+│   │   │   ├── Post.cs
+│   │   │   └── UserTemplate.cs
+│   │   ├── Error.cs
+│   │   ├── Errors.cs
+│   │   └── Skeleton.Domain.csproj
+│   ├── Skeleton.Infrastructure.Implementation.Database
+│   │   ├── DatabaseConfiguration.cs
+│   │   ├── DatabaseContext.cs
+│   │   ├── DatabaseErrorMessagesProvider.cs
+│   │   ├── DatabaseSettings.cs
+│   │   ├── EntityTypeConfigurations
+│   │   │   ├── BlogEntityTypeConfiguration.cs
+│   │   │   └── UserTemplateEntityTypeConfiguration.cs
+│   │   ├── ReadOnlyDatabaseContext.cs
+│   │   └── Skeleton.Infrastructure.Implementation.Database.csproj
+│   ├── Skeleton.Infrastructure.Interfaces.Database
+│   │   ├── IDatabaseContext.cs
+│   │   ├── IDatabaseErrorMessagesProvider.cs
+│   │   ├── IReadOnlyDatabaseContext.cs
+│   │   └── Skeleton.Infrastructure.Interfaces.Database.csproj
+│   └── Skeleton.UseCases
+│       ├── Skeleton.UseCases.csproj
+│       └── UserTemplates
+│           ├── Commands
+│           │   ├── Create
+│           │   │   ├── CreateUserTemplateCommand.cs
+│           │   │   ├── CreateUserTemplateCommandHandler.cs
+│           │   │   └── CreateUserTemplateDto.cs
+│           │   ├── Delete
+│           │   │   ├── DeleteUserTemplateCommand.cs
+│           │   │   └── DeleteUserTemplateCommandHandler.cs
+│           │   └── Update
+│           │       ├── UpdateUserTemplateCommand.cs
+│           │       └── UpdateUserTemplateCommandHandler.cs
+│           └── Queries
+│               ├── Get
+│               │   ├── GetUserTemplateDto.cs
+│               │   ├── GetUserTemplateQuery.cs
+│               │   └── GetUserTemplateQueryHandler.cs
+│               ├── List
+│               │   ├── ListUserTemplatesDto.cs
+│               │   ├── ListUserTemplatesQuery.cs
+│               │   └── ListUserTemplatesQueryHandler.cs
+│               └── Search
+│                   ├── SearchUserTemplatesDto.cs
+│                   ├── SearchUserTemplatesQuery.cs
+│                   └── SearchUserTemplatesQueryHandler.cs
+└── tests
+    ├── Skeleton.Api.IntegrationTests
+    │   ├── DefaultWebApplicationFactory.cs
+    │   ├── Skeleton.Api.IntegrationTests.csproj
+    │   └── UserTemplates
+    │       └── CreateUserTemplateEndpointTests.cs
+    └── Skeleton.Domain.UnitTests
+        ├── Skeleton.Domain.UnitTests.csproj
+        └── UnitTest1.cs
+
+32 directories, 71 files
+```
+
+### `skeleton-api`
+
+### `skeleton-console`
