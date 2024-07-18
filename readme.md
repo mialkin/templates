@@ -12,29 +12,19 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
     - [3. Create new solution based on installed template](#3-create-new-solution-based-on-installed-template)
     - [4. Initialize Git repository and create first commit](#4-initialize-git-repository-and-create-first-commit)
   - [Template descriptions](#template-descriptions)
-    - [`skeleton-cqrs`](#skeleton-cqrs)
     - [`skeleton-console`](#skeleton-console)
     - [`skeleton-api`](#skeleton-api)
+    - [`skeleton-cqrs`](#skeleton-cqrs)
 
 ## How to use template
 
 ### 1\. Select folder with template you want to install
 
 ```bash
-cd skeleton-cqrs
+cd TEMPLATE_FOLDER
 ```
 
-or:
-
-```bash
-cd skeleton-console
-```
-
-or:
-
-```bash
-cd skeleton-api
-```
+Here `TEMPLATE_FOLDER` is one of: `skeleton-console`, `skeleton-api`, `skeleton-cqrs`.
 
 ### 2\. Install template
 
@@ -48,17 +38,6 @@ dotnet new install . --force
 ```bash
 mkdir SOLUTION_FOLDER && cd "$_"
 ```
-
-```bash
-dotnet new skeleton-cqrs \
---name=SOLUTION_NAME \
---api-port=API_PORT \
---postgres-port=POSTGRES_PORT \
---main-entity-name=MAIN_ENTITY_NAME \
---force
-```
-
-or:
 
 ```bash
 dotnet new skeleton-console \
@@ -76,6 +55,17 @@ dotnet new skeleton-api \
 --force
 ```
 
+or:
+
+```bash
+dotnet new skeleton-cqrs \
+--name=SOLUTION_NAME \
+--api-port=API_PORT \
+--main-entity-name=MAIN_ENTITY_NAME \
+--postgres-port=POSTGRES_PORT \
+--force
+```
+
 Example:
 
 ```bash
@@ -86,8 +76,8 @@ mkdir company-notes && cd "$_"
 dotnet new skeleton-cqrs \
 --name=Company.Notes \
 --api-port=8040 \
---postgres-port=8050 \
 --main-entity-name=User \
+--postgres-port=8050 \
 --force
 ```
 
@@ -112,6 +102,66 @@ git init && git add . && git commit --message "Initial commit"
 ```
 
 ## Template descriptions
+
+
+
+### `skeleton-console`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Directory.Build.props
+├── Makefile
+├── Skeleton.sln
+├── readme.md
+└── src
+    └── Skeleton
+        ├── Program.cs
+        └── Skeleton.csproj
+```
+
+### `skeleton-api`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Directory.Build.props
+├── Makefile
+├── Skeleton.sln
+├── readme.md
+├── src
+│   └── Skeleton.Api
+│       ├── Endpoints
+│       │   ├── EndpointsMapperExtension.cs
+│       │   └── UserTemplates
+│       │       ├── Create
+│       │       │   ├── CreateUserTemplateEndpoint.cs
+│       │       │   ├── CreateUserTemplateRequest.cs
+│       │       │   └── CreateUserTemplateResponse.cs
+│       │       ├── Get
+│       │       │   ├── GetUserTemplateEndpoint.cs
+│       │       │   └── GetUserTemplateResponse.cs
+│       │       ├── ...
+│       ├── Program.cs
+│       ├── Properties
+│       │   └── launchSettings.json
+│       ├── Skeleton.Api.csproj
+│       ├── appsettings.Ide.json
+│       ├── appsettings.Production.json
+│       └── appsettings.json
+└── tests
+    ├── Skeleton.Api.IntegrationTests
+    │   ├── DefaultWebApplicationFactory.cs
+    │   ├── Skeleton.Api.IntegrationTests.csproj
+    │   └── UserTemplates
+    │       └── CreateUserTemplateEndpointTests.cs
+    └── Skeleton.Domain.UnitTests
+        ├── Skeleton.Domain.UnitTests.csproj
+```
 
 ### `skeleton-cqrs`
 
@@ -193,64 +243,6 @@ File tree:
 │               │   ├── GetUserTemplateQuery.cs
 │               │   └── GetUserTemplateQueryHandler.cs
 │               ├── ...
-└── tests
-    ├── Skeleton.Api.IntegrationTests
-    │   ├── DefaultWebApplicationFactory.cs
-    │   ├── Skeleton.Api.IntegrationTests.csproj
-    │   └── UserTemplates
-    │       └── CreateUserTemplateEndpointTests.cs
-    └── Skeleton.Domain.UnitTests
-        ├── Skeleton.Domain.UnitTests.csproj
-```
-
-### `skeleton-console`
-
-File tree:
-
-```text
-├── .editorconfig
-├── .gitignore
-├── Directory.Build.props
-├── Makefile
-├── Skeleton.sln
-├── readme.md
-└── src
-    └── Skeleton
-        ├── Program.cs
-        └── Skeleton.csproj
-```
-
-### `skeleton-api`
-
-File tree:
-
-```text
-├── .editorconfig
-├── .gitignore
-├── Directory.Build.props
-├── Makefile
-├── Skeleton.sln
-├── readme.md
-├── src
-│   └── Skeleton.Api
-│       ├── Endpoints
-│       │   ├── EndpointsMapperExtension.cs
-│       │   └── UserTemplates
-│       │       ├── Create
-│       │       │   ├── CreateUserTemplateEndpoint.cs
-│       │       │   ├── CreateUserTemplateRequest.cs
-│       │       │   └── CreateUserTemplateResponse.cs
-│       │       ├── Get
-│       │       │   ├── GetUserTemplateEndpoint.cs
-│       │       │   └── GetUserTemplateResponse.cs
-│       │       ├── ...
-│       ├── Program.cs
-│       ├── Properties
-│       │   └── launchSettings.json
-│       ├── Skeleton.Api.csproj
-│       ├── appsettings.Ide.json
-│       ├── appsettings.Production.json
-│       └── appsettings.json
 └── tests
     ├── Skeleton.Api.IntegrationTests
     │   ├── DefaultWebApplicationFactory.cs
