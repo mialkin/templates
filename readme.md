@@ -13,8 +13,8 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
     - [4. Initialize Git repository and create first commit](#4-initialize-git-repository-and-create-first-commit)
   - [Template descriptions](#template-descriptions)
     - [`skeleton-cqrs`](#skeleton-cqrs)
-    - [`skeleton-api`](#skeleton-api)
     - [`skeleton-console`](#skeleton-console)
+    - [`skeleton-api`](#skeleton-api)
 
 ## How to use template
 
@@ -119,9 +119,9 @@ Solution dependencies:
 
 <img src="docs/project-dependencies.png" width="600px" alt="Description of skeleton-cqrs solution">
 
-Files tree:
+File tree:
 
-```console
+```text
 ├── .dockerignore
 ├── .editorconfig
 ├── .env.example
@@ -203,6 +203,60 @@ Files tree:
         ├── Skeleton.Domain.UnitTests.csproj
 ```
 
+### `skeleton-console`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Directory.Build.props
+├── Makefile
+├── Skeleton.sln
+├── readme.md
+└── src
+    └── Skeleton
+        ├── Program.cs
+        └── Skeleton.csproj
+```
+
 ### `skeleton-api`
 
-### `skeleton-console`
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Directory.Build.props
+├── Makefile
+├── Skeleton.sln
+├── readme.md
+├── src
+│   └── Skeleton.Api
+│       ├── Endpoints
+│       │   ├── EndpointsMapperExtension.cs
+│       │   └── UserTemplates
+│       │       ├── Create
+│       │       │   ├── CreateUserTemplateEndpoint.cs
+│       │       │   ├── CreateUserTemplateRequest.cs
+│       │       │   └── CreateUserTemplateResponse.cs
+│       │       ├── Get
+│       │       │   ├── GetUserTemplateEndpoint.cs
+│       │       │   └── GetUserTemplateResponse.cs
+│       │       ├── ...
+│       ├── Program.cs
+│       ├── Properties
+│       │   └── launchSettings.json
+│       ├── Skeleton.Api.csproj
+│       ├── appsettings.Ide.json
+│       ├── appsettings.Production.json
+│       └── appsettings.json
+└── tests
+    ├── Skeleton.Api.IntegrationTests
+    │   ├── DefaultWebApplicationFactory.cs
+    │   ├── Skeleton.Api.IntegrationTests.csproj
+    │   └── UserTemplates
+    │       └── CreateUserTemplateEndpointTests.cs
+    └── Skeleton.Domain.UnitTests
+        ├── Skeleton.Domain.UnitTests.csproj
+```
