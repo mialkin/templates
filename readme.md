@@ -117,11 +117,15 @@ git init && git add . && git commit --message "Initial commit"
 
 Solution dependencies:
 
-<img src="docs/project-dependencies.png" alt="Description of skeleton-cqrs solution">
+<img src="docs/project-dependencies.png" width="600px" alt="Description of skeleton-cqrs solution">
 
 Files tree:
 
 ```console
+├── .dockerignore
+├── .editorconfig
+├── .env.example
+├── .gitignore
 ├── Directory.Build.props
 ├── Makefile
 ├── Skeleton.sln
@@ -148,28 +152,14 @@ Files tree:
 │   │       │   ├── CreateUserTemplateEndpoint.cs
 │   │       │   ├── CreateUserTemplateRequest.cs
 │   │       │   └── CreateUserTemplateResponse.cs
-│   │       ├── Delete
-│   │       │   ├── DeleteUserTemplateEndpoint.cs
-│   │       │   └── DeleteUserTemplateRequest.cs
 │   │       ├── Get
 │   │       │   ├── GetUserTemplateEndpoint.cs
 │   │       │   └── GetUserTemplateResponse.cs
-│   │       ├── List
-│   │       │   ├── ListUserTemplatesEndpoint.cs
-│   │       │   └── ListUserTemplatesResponse.cs
-│   │       ├── Search
-│   │       │   ├── SearchUserTemplatesEndpoint.cs
-│   │       │   ├── SearchUserTemplatesRequest.cs
-│   │       │   └── SearchUserTemplatesResponse.cs
-│   │       └── Update
-│   │           ├── UpdateUserTemplateEndpoint.cs
-│   │           └── UpdateUserTemplateRequest.cs
+│   │       ├── ...
 │   ├── Skeleton.Domain
 │   │   ├── Entities
-│   │   │   ├── Blog.cs
-│   │   │   ├── Comment.cs
-│   │   │   ├── Post.cs
-│   │   │   └── UserTemplate.cs
+│   │   │   ├── UserTemplate.cs
+│   │   │   ├── ...
 │   │   ├── Error.cs
 │   │   ├── Errors.cs
 │   │   └── Skeleton.Domain.csproj
@@ -196,25 +186,13 @@ Files tree:
 │           │   │   ├── CreateUserTemplateCommand.cs
 │           │   │   ├── CreateUserTemplateCommandHandler.cs
 │           │   │   └── CreateUserTemplateDto.cs
-│           │   ├── Delete
-│           │   │   ├── DeleteUserTemplateCommand.cs
-│           │   │   └── DeleteUserTemplateCommandHandler.cs
-│           │   └── Update
-│           │       ├── UpdateUserTemplateCommand.cs
-│           │       └── UpdateUserTemplateCommandHandler.cs
+│           │   ├── ...
 │           └── Queries
 │               ├── Get
 │               │   ├── GetUserTemplateDto.cs
 │               │   ├── GetUserTemplateQuery.cs
 │               │   └── GetUserTemplateQueryHandler.cs
-│               ├── List
-│               │   ├── ListUserTemplatesDto.cs
-│               │   ├── ListUserTemplatesQuery.cs
-│               │   └── ListUserTemplatesQueryHandler.cs
-│               └── Search
-│                   ├── SearchUserTemplatesDto.cs
-│                   ├── SearchUserTemplatesQuery.cs
-│                   └── SearchUserTemplatesQueryHandler.cs
+│               ├── ...
 └── tests
     ├── Skeleton.Api.IntegrationTests
     │   ├── DefaultWebApplicationFactory.cs
@@ -223,9 +201,6 @@ Files tree:
     │       └── CreateUserTemplateEndpointTests.cs
     └── Skeleton.Domain.UnitTests
         ├── Skeleton.Domain.UnitTests.csproj
-        └── UnitTest1.cs
-
-32 directories, 71 files
 ```
 
 ### `skeleton-api`
