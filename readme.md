@@ -66,6 +66,14 @@ dotnet new skeleton-cqrs \
 --force
 ```
 
+or:
+
+```bash
+dotnet new skeleton-sln \
+--name=SOLUTION_NAME \
+--force
+```
+
 Example:
 
 ```bash
@@ -102,8 +110,6 @@ git init && git add . && git commit --message "Initial commit"
 ```
 
 ## Template descriptions
-
-
 
 ### `skeleton-console`
 
@@ -251,4 +257,16 @@ File tree:
     │       └── CreateUserTemplateEndpointTests.cs
     └── Skeleton.Domain.UnitTests
         ├── Skeleton.Domain.UnitTests.csproj
+```
+
+### `skeleton-sln`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Grpc.sln
+├── Makefile
+└── readme.md
 ```

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Aleksei Mialkin",
+  "classifications": [
+    "Skeleton",
+    "Sln"
+  ],
+  "identity": "Skeleton.Sln",
+  "name": "Skeleton solution",
+  "shortName": "skeleton-sln",
+  "sourceName": "Skeleton",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/.env",
+            "**/.git/**",
+            "**/.idea/**",
+            "**/.DS_Store"
+          ]
+        }
+      ]
+    }
+  ]
+}
