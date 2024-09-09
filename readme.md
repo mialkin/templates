@@ -15,6 +15,7 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
     - [`skeleton-console`](#skeleton-console)
     - [`skeleton-api`](#skeleton-api)
     - [`skeleton-cqrs`](#skeleton-cqrs)
+    - [`skeleton-sln`](#skeleton-sln)
 
 ## How to use template
 
