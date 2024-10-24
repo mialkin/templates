@@ -141,7 +141,7 @@ File tree:
 ```text
 ├── .editorconfig
 ├── .gitignore
-├── Grpc.sln
+├── Skeleton.sln
 ├── Makefile
 └── readme.md
 ```
