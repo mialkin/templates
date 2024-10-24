@@ -42,7 +42,7 @@ mkdir SOLUTION_FOLDER && cd SOLUTION_FOLDER
 ```
 
 ```bash
-dotnet new skeleton-minial-api --name=SOLUTION_NAME --force
+dotnet new skeleton-minimal-api --name=SOLUTION_NAME --force
 ```
 
 or:
