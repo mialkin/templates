@@ -5,8 +5,8 @@
     "Skeleton",
     "Minimal API"
   ],
-  "identity": "Skeleton.Api",
-  "name": "Skeleton API",
+  "identity": "Skeleton.Minimal.Api",
+  "name": "Skeleton minimal API",
   "shortName": "skeleton-minimal-api",
   "sourceName": "Skeleton",
   "tags": {

@@ -12,10 +12,11 @@ This solution contains [↑ custom template](https://learn.microsoft.com/en-us/d
     - [3. Create new solution based on installed template](#3-create-new-solution-based-on-installed-template)
     - [4. Initialize Git repository and create first commit](#4-initialize-git-repository-and-create-first-commit)
   - [Template descriptions](#template-descriptions)
+    - [`skeleton-minimal-api`](#skeleton-minimal-api)
+    - [`skeleton-sln`](#skeleton-sln)
     - [`skeleton-console`](#skeleton-console)
     - [`skeleton-api`](#skeleton-api)
     - [`skeleton-cqrs`](#skeleton-cqrs)
-    - [`skeleton-sln`](#skeleton-sln)
 
 ## How to use template
 
@@ -37,13 +38,23 @@ dotnet new install . --force
 ### 3\. Create new solution based on installed template
 
 ```bash
-mkdir SOLUTION_FOLDER && cd "$_"
+mkdir SOLUTION_FOLDER && cd SOLUTION_FOLDER
 ```
 
 ```bash
-dotnet new skeleton-console \
---name=SOLUTION_NAME \
---force
+dotnet new skeleton-minial-api --name=SOLUTION_NAME --force
+```
+
+or:
+
+```bash
+dotnet new skeleton-sln --name=SOLUTION_NAME --force
+```
+
+or:
+
+```bash
+dotnet new skeleton-console --name=SOLUTION_NAME --force
 ```
 
 or:
@@ -64,14 +75,6 @@ dotnet new skeleton-cqrs \
 --api-port=API_PORT \
 --main-entity-name=MAIN_ENTITY_NAME \
 --postgres-port=POSTGRES_PORT \
---force
-```
-
-or:
-
-```bash
-dotnet new skeleton-sln \
---name=SOLUTION_NAME \
 --force
 ```
 
@@ -104,13 +107,44 @@ Running command 'dotnet format'...
 Command succeeded.
 ```
 
-### 4\. Initialize Git repository and create first commit 
+### 4\. Initialize Git repository and create first commit
 
 ```bash
 git init && git add . && git commit --message "Initial commit"
 ```
 
 ## Template descriptions
+
+### `skeleton-minimal-api`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Skeleton.sln
+├── readme.md
+└── src
+    └── Skeleton.Api
+        ├── Program.cs
+        ├── Properties
+        │   └── launchSettings.json
+        ├── Skeleton.Api.csproj
+        ├── appsettings.Ide.json
+        ├── appsettings.json
+```
+
+### `skeleton-sln`
+
+File tree:
+
+```text
+├── .editorconfig
+├── .gitignore
+├── Grpc.sln
+├── Makefile
+└── readme.md
+```
 
 ### `skeleton-console`
 
@@ -258,16 +292,4 @@ File tree:
     │       └── CreateUserTemplateEndpointTests.cs
     └── Skeleton.Domain.UnitTests
         ├── Skeleton.Domain.UnitTests.csproj
-```
-
-### `skeleton-sln`
-
-File tree:
-
-```text
-├── .editorconfig
-├── .gitignore
-├── Grpc.sln
-├── Makefile
-└── readme.md
 ```
