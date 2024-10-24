@@ -122,7 +122,7 @@ File tree:
 ```text
 ├── .editorconfig
 ├── .gitignore
-├── Skeleton.slnx
+├── Skeleton.sln
 ├── readme.md
 └── src
     └── Skeleton.Api
