@@ -142,7 +142,6 @@ File tree:
 ├── .editorconfig
 ├── .gitignore
 ├── Skeleton.sln
-├── Makefile
 └── readme.md
 ```
 
